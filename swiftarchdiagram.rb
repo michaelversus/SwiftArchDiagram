@@ -3,7 +3,7 @@ class Swiftarchdiagram < Formula
   homepage "https://github.com/michaelversus/SwiftArchDiagram"
   url "https://github.com/michaelversus/SwiftArchDiagram"
   version "0.1.0"
-  sha256 "5b1c2d8089125e839339690a82018fbd9cb2962a5ee13a6f8b2dbde68f4fb393"
+  sha256 "66e8f0bab44097f28a9049b1f1b228c4a3ac3c583ebf3ceee95d30a921fe3d54"
   license "MIT"
   uses_from_macos "swift"
   def install
