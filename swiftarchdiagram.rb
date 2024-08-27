@@ -8,7 +8,7 @@ class Swiftarchdiagram < Formula
   uses_from_macos "swift"
   def install
     system "swift", "build", "-c", "release"
-    bin.install "SwiftArchDiagram"
+    bin.install ".build/release/SwiftArchDiagram"
   end
 
   test do
