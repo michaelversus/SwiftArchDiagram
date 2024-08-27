@@ -48,7 +48,7 @@ private extension SPMCommandFlowHandler {
             }
         }
         appSDKString += "\tend\n"
-        appSDKString += "\tblockArrowId9<[\"3rd party SDKs\"]>(up)\n"
+        appSDKString += "\tblockArrowIdT9999<[\"3rd party SDKs\"]>(up)\n"
         appSDKString = appSDKString.replacingOccurrences(of: "-", with: ".")
         appSDKString = "block-beta\n" + appSDKString
         return appSDKString
@@ -128,7 +128,7 @@ private extension SPMCommandFlowHandler {
         diagramString += "\tApp((\"APP\"))\n"
         var dependenciesString = "\n"
         dependenciesString += "\t%% Relations between modules\n"
-        var sdksString = "\tblockArrowId\(levels.count)<[\"3rd Party SDKs\"]>(down)\n"
+        var sdksString = "\tblockArrowIdB9999<[\"3rd Party SDKs\"]>(down)\n"
         sdksString += "\tblock:3rd_Party_SDKs\n"
         let targetNames = targetWrappers.map(\.target.name)
         var parsedSDKs: [String] = []
