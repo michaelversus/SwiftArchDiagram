@@ -1,7 +1,6 @@
 
 import ArgumentParser
 import Foundation
-import Yams
 
 @main
 struct SwiftArchDiagram: ParsableCommand {
