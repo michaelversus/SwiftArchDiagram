@@ -1,4 +1,4 @@
-class SwiftArchDiagram < Formula
+class Swiftarchdiagram < Formula
   desc "A command line tool that generates mermaid diagram for Swift Packages"
   homepage "https://github.com/michaelversus/SwiftArchDiagram"
   url "https://github.com/michaelversus/SwiftArchDiagram"
