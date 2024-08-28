@@ -44,8 +44,8 @@ Second step execute the followong command:
 swiftarchdiagram --directory ~/App/Packages --rpath ~/App/SomeApp.xcworkspace/xcshareddata/swiftpm/Package.resolved --with-relations
 ```
 - **directory**: the internal Swift Packages directory that you are using if any
-- **rpath**: the path of the main Package.resolved for your project or workspace**
-- **with-relations**: add arrows to display dependencies between packages
+- **rpath**: the path of the main Package.resolved for your project or workspace. (Optional)
+- **with-relations**: add arrows to display dependencies between packages (Optional)
 
 The above command will generate an Architecture.md file that contains the mermaid diagram for your app like this
 
