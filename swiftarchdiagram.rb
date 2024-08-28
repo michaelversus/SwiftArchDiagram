@@ -1,8 +1,8 @@
 class Swiftarchdiagram < Formula
   desc "Swift Architecture diagram generation using mermaid"
   homepage "https://github.com/michaelversus/SwiftArchDiagram"
-  url "https://github.com/michaelversus/SwiftArchDiagram.git", tag: "0.1.4"
-  version "0.1.4"
+  url "https://github.com/michaelversus/SwiftArchDiagram.git", tag: "0.1.5"
+  version "0.1.5"
 
   depends_on "xcode": [:build]
 
