@@ -26,6 +26,7 @@ struct SwiftArchDiagram: ParsableCommand {
         let parser = MainCommandHandler(handlers: [spmHandler])
         try parser.handleCommand(
             withRelations: withRelations,
+            shouldWrap: shouldWrap,
             rootDirectoryURL: directoryURL,
             packageResolvedURL: resolvedURL
         )
