@@ -10,6 +10,7 @@ import Foundation
 protocol CommandFlowHandler {
     func handleCommand(
         withRelations: Bool,
+        shouldWrap: Bool,
         rootDirectoryURL: URL,
         packageResolvedURL: URL?
     ) throws

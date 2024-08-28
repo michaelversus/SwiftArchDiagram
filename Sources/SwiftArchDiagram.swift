@@ -12,6 +12,9 @@ struct SwiftArchDiagram: ParsableCommand {
     
     @Flag(name: .shortAndLong, help: "Should add relation arrows for modules")
     var withRelations: Bool = false
+    
+    @Flag(name: .shortAndLong, help: "Should wrap the diagram using ```mermaid for github")
+    var shouldWrap: Bool = false
 
     func run() throws {
         let directoryURL = URL(fileURLWithPath: directory)

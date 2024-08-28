@@ -18,12 +18,14 @@ final class MainCommandHandler: CommandFlowHandler {
     
     func handleCommand(
         withRelations: Bool,
+        shouldWrap: Bool,
         rootDirectoryURL: URL,
         packageResolvedURL: URL?
     ) throws {
         try handlers.forEach {
             try $0.handleCommand(
                 withRelations: withRelations,
+                shouldWrap: shouldWrap,
                 rootDirectoryURL: rootDirectoryURL,
                 packageResolvedURL: packageResolvedURL
             )

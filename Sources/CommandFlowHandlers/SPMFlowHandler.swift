@@ -16,6 +16,7 @@ final class SPMCommandFlowHandler: CommandFlowHandler {
     
     func handleCommand(
         withRelations: Bool,
+        shouldWrap: Bool,
         rootDirectoryURL: URL,
         packageResolvedURL: URL?
     ) throws {
@@ -26,7 +27,8 @@ final class SPMCommandFlowHandler: CommandFlowHandler {
         try parseAllPackages(
             for: rootDirectoryURL,
             appSDKsString: appSDKsString,
-            withRelations: withRelations
+            withRelations: withRelations,
+            shouldWrap: shouldWrap
         )
     }
 }
@@ -75,7 +77,8 @@ private extension SPMCommandFlowHandler {
     func parseAllPackages(
         for url: URL,
         appSDKsString: String?,
-        withRelations: Bool
+        withRelations: Bool,
+        shouldWrap: Bool
     ) throws {
         let urls = findPackageSwiftFiles(in: url)
         let packageWrappers = try urls.map { url in
@@ -87,11 +90,14 @@ private extension SPMCommandFlowHandler {
             )
         }
         let targetWrappers = packageWrappers.map(transformToTargetWrappers(packageWrapper:)).flatMap { $0 }
-        let diagramString = makeDiagramString(
+        var diagramString = makeDiagramString(
             targetWrappers: targetWrappers,
             appSDKsString: appSDKsString,
             withRelations: withRelations
         )
+        if shouldWrap {
+            diagramString = "```mermaid\n" + diagramString + "\n```"
+        }
         try writeFile(with: diagramString, at: url)
     }
     
