@@ -1,6 +1,6 @@
 # Installation
 ```bash
-brew tap user/repo https://github.com/michaelversus/SwiftArchDiagram
+brew tap yourusername/swiftarchdiagram https://github.com/michaelversus/SwiftArchDiagram
 brew install swiftarchdiagram
 ```
 # Example
