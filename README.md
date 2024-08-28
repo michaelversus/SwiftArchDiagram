@@ -36,8 +36,9 @@ let package = Package(
         ),
     ]
 )
-Example project [here](https://github.com/michaelversus/SwiftArchDiagramDemoProject)
 ```
+Example project [here](https://github.com/michaelversus/SwiftArchDiagramDemoProject)
+
 Execute the followong command:
 ```bash
 swiftarchdiagram --directory ~/App/Packages --rpath ~/App/SomeApp.xcworkspace/xcshareddata/swiftpm/Package.resolved --with-relations
