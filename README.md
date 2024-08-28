@@ -4,6 +4,39 @@ brew tap yourusername/swiftarchdiagram https://github.com/michaelversus/SwiftArc
 brew install swiftarchdiagram
 ```
 # Usage
+First step is to update the internal Packages using some special comments to help swiftarchdiagram draw the diagram for your architecture like this:
+```swift
+import PackageDescription
+
+// swift-arch-target: DPNetworking
+// swift-arch-layer: Foundation
+// swift-arch-level: 2
+
+let package = Package(
+    name: "DPNetworking",
+    products: [
+        .library(
+            name: "DPNetworking",
+            targets: ["DPNetworking"]
+        ),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.9.1")
+    ],
+    targets: [
+        .target(
+            name: "DPNetworking",
+            dependencies: [
+                .product(name: "Alamofire", package: "Alamofire")
+            ]
+        ),
+        .testTarget(
+            name: "DPNetworkingTests",
+            dependencies: ["DPNetworking"]
+        ),
+    ]
+)
+```
 Execute the followong command:
 ```bash
 swiftarchdiagram --directory ~/App/Packages --rpath ~/App/SomeApp.xcworkspace/xcshareddata/swiftpm/Package.resolved --with-relations
