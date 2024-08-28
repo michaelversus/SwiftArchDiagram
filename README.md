@@ -36,6 +36,7 @@ let package = Package(
         ),
     ]
 )
+Example project [here](https://github.com/michaelversus/SwiftArchDiagramDemoProject)
 ```
 Execute the followong command:
 ```bash
