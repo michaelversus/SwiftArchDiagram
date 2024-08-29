@@ -4,7 +4,7 @@ brew tap michaelversus/swiftarchdiagram https://github.com/michaelversus/SwiftAr
 brew install swiftarchdiagram
 ```
 # Usage
-First step is to update the internal Packages using some special comments to help swiftarchdiagram draw the diagram for your architecture like this:
+First step is to update the internal Packages using some special comments to help swiftarchdiagram draw the diagram for your architecture with multiple layers and levels:
 ```swift
 import PackageDescription
 
